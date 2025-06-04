@@ -72,61 +72,154 @@
             color: white;
             padding: 4rem 0 2rem 0;
             box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+            min-height: 200px;
         }
 
-        .footer h3 {
+        .footer-container {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            gap: 3rem;
+            flex-wrap: wrap;
+            height: 100%;
+        }
+
+        .footer-logo-section {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-logo-section img {
+            height: 160px;
+            width: auto;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+        }
+
+        .footer-about-section {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .footer-about-title {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.8rem;
-            color: #e0d4f7;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+            background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 50%, #c4b5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.2rem;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(139, 92, 246, 0.3);
         }
 
-        .footer h4 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.4rem;
-            color: #e0d4f7;
-            letter-spacing: 1.5px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .footer .lead {
-            font-size: 1.1rem;
-            color: #d1c9e3;
-            line-height: 1.8;
+        .footer-about-text {
             font-family: 'Lato', sans-serif;
-            font-weight: 400;
-            max-width: 600px;
+            font-size: 1rem;
+            color: #d1c9e3;
+            line-height: 1.7;
+            margin: 0;
+            text-align: justify;
+            text-justify: inter-word;
         }
 
-        .footer .btn-social {
-            border-color: #8b5cf6;
-            color: #8b5cf6;
-            width: 60px;
-            height: 60px;
-            font-size: 1.5rem;
-            border-width: 2px;
+        .footer-social-links {
+            display: flex;
+            gap: 1rem;
+            flex: 0 0 auto;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .footer-social-icon {
+            width: 45px;
+            height: 45px;
+            fill: #8b5cf6;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
         }
 
-        .footer .btn-social:hover {
-            background-color: #8b5cf6;
-            color: white;
+        .footer-social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .footer-social-links a:hover {
+            background-color: rgba(139, 92, 246, 0.2);
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.3);
         }
 
-        .footer .location-text {
-            color: #d1c9e3;
-            font-size: 1.1rem;
-            font-family: 'Lato', sans-serif;
-            font-weight: 500;
+        .footer-social-links a:hover .footer-social-icon {
+            fill: #a78bfa;
+            transform: scale(1.15);
         }
 
-        .footer .location-icon {
-            color: #8b5cf6;
-            font-size: 1.2rem;
+        /* Responsive design for footer */
+        @media (max-width: 991.98px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+                align-items: center;
+            }
+
+            .footer-about-section {
+                margin: 0;
+                max-width: 100%;
+            }
+
+            .footer-social-links {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .footer {
+                padding: 3rem 0 2rem 0;
+                min-height: auto;
+            }
+
+            .footer-logo-section img {
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-container {
+                gap: 1.5rem;
+            }
+
+            .footer-logo-section img {
+                height: 100px;
+            }
+
+            .footer-about-title {
+                font-size: 1.5rem;
+            }
+
+            .footer-about-text {
+                font-size: 0.9rem;
+            }
+
+            .footer-social-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .footer-social-links a {
+                padding: 8px;
+            }
         }
 
         .copyright {
@@ -158,32 +251,6 @@
                 padding: 1.5rem;
                 margin: 0.5rem;
             }
-
-            .footer {
-                padding: 3rem 0 2rem 0;
-            }
-
-            .footer .col-lg-8 {
-                margin-bottom: 3rem !important;
-            }
-
-            .footer h3 {
-                font-size: 1.5rem !important;
-            }
-
-            .footer h4 {
-                font-size: 1.2rem !important;
-            }
-
-            .footer .lead {
-                font-size: 1rem !important;
-            }
-
-            .footer .btn-social {
-                width: 50px !important;
-                height: 50px !important;
-                font-size: 1.2rem !important;
-            }
         }
     </style>
 </head>
@@ -199,9 +266,6 @@
         <div class="container d-flex align-items-center flex-column"
             style="min-height: 100vh; justify-content: center; position: relative; z-index: 2;">
             <div class="glass-content">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/alumni_celllogo-removebg-preview.png"
-                    alt="SACC Logo" />
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">YEARBOOK <span class="year-display"></span></h1>
                 <!-- Icon Divider-->
@@ -258,53 +322,48 @@
         </div>
     </header>
     <!-- Footer-->
-    <footer class="footer text-center" id="footer">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <!-- Footer Logo and About -->
-                <div class="col-lg-8 mb-5 mb-lg-0">
-                    <div
-                        class="d-flex align-items-center justify-content-center justify-content-lg-start flex-column flex-lg-row">
-                        <img src="assets/img/alumni_celllogo-removebg-preview.png" alt="SACC Logo"
-                            style="height: 80px; margin-bottom: 2rem; margin-right: 0; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));"
-                            class="mb-lg-0 me-lg-4">
-                        <div class="text-center text-lg-start">
-                            <h3 class="text-uppercase mb-3 fw-bold">Student Alumni Connect Cell</h3>
-                            <p class="mb-0 lead">
-                                Fostering meaningful connections between students, alumni, and the Institute. SACC
-                                provides mentorship opportunities, organizes engaging events, and offers valuable
-                                resources to help students and alumni connect with their alma mater and fellow
-                                graduates.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Footer Social Icons -->
-                <div class="col-lg-4">
-                    <h4 class="text-uppercase mb-4 fw-bold">Connect With Us</h4>
-                    <div class="mb-4">
-                        <a class="btn btn-outline-light btn-social mx-2 mb-3"
-                            href="https://www.facebook.com/iiith.alumnicell">
-                            <i class="fab fa-fw fa-facebook-f"></i>
-                        </a>
-                        <a class="btn btn-outline-light btn-social mx-2 mb-3"
-                            href="https://www.linkedin.com/company/alumni-cell-iiit-h/">
-                            <i class="fab fa-fw fa-linkedin-in"></i>
-                        </a>
-                        <a class="btn btn-outline-light btn-social mx-2 mb-3"
-                            href="https://www.instagram.com/alumnicell_iiith/">
-                            <i class='fab fa-instagram'></i>
-                        </a>
-                    </div>
-                    <div class="mb-3">
-                        <p class="mb-2 location-text">
-                            <i class="fas fa-map-marker-alt me-3 location-icon"></i>
-                            IIIT Hyderabad
-                        </p>
-                        <p class="mb-0" style="color: #d1c9e3; font-size: 1rem; font-family: 'Lato', sans-serif;">
-                            Gachibowli, Hyderabad - 500032
-                        </p>
-                    </div>
-                </div>
+    <footer class="footer" id="footer">
+        <div class="footer-container container">
+            <div class="footer-logo-section">
+                <img src="assets/img/alumni_celllogo-removebg-preview.png" alt="SACC Logo">
+            </div>
+            <div class="footer-about-section">
+                <h3 class="footer-about-title">About SACC</h3>
+                <p class="footer-about-text">Student Alumni Connect Cell (SACC) is a student-run organization
+                    that aims to foster connections between students, alumni, and the Institute. SACC provides
+                    mentorship, organizes events, and offers resources to help students and alumni engage with their
+                    alma mater and fellow alumni.</p>
+            </div>
+            <div class="footer-social-links">
+                <a href="https://www.facebook.com/iiith.alumnicell" target="_blank" rel="noopener noreferrer">
+                    <svg class="footer-social-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                        <path
+                            d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/alumnicell_iiith/" target="_blank" rel="noopener noreferrer">
+                    <svg class="footer-social-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                        <path
+                            d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/alumni-cell-iiit-h/posts/?feedView=all" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg class="footer-social-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                        <path
+                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="mailto:sacc@iiit.ac.in">
+                    <svg class="footer-social-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                        <path
+                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4-8 5-8-5V6l8 5 8-5z">
+                        </path>
+                    </svg>
+                </a>
             </div>
         </div>
     </footer>
@@ -312,7 +371,7 @@
     <div class="copyright py-4 text-center text-white">
         <div class="container">
             <p class="mb-0">
-                Copyright &copy; <strong>Student Alumni Connect Cell</strong>, <span id="copyright-year-span"></span>
+                Copyright © <strong>SACC IIITH</strong> <span id="copyright-year-span"></span>
             </p>
         </div>
     </div>
