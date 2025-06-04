@@ -22,7 +22,7 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            background-color: #181326;
+            background-color: #1a1030;
         }
 
         .masthead {
@@ -31,7 +31,7 @@
             align-items: center !important;
             padding-top: 0 !important;
             padding-bottom: 0 !important;
-            background-color: #181326;
+            background-color: #1a1030;
         }
 
         .masthead .container {
@@ -44,17 +44,19 @@
 
         /* Remove glassy styles - clean content sections */
         .glass-content {
-            background: rgba(24, 19, 38, 0.8);
+            background: rgba(32, 16, 48, 0.85);
             border-radius: 10px;
             padding: 2rem;
             margin: 1rem;
+            border: 1px solid rgba(64, 32, 96, 0.4);
         }
 
         .glass-section {
-            background: rgba(24, 19, 38, 0.6);
+            background: rgba(32, 16, 48, 0.7);
             border-radius: 10px;
             padding: 1.5rem;
             margin-top: 1rem;
+            border: 1px solid rgba(64, 32, 96, 0.3);
         }
 
         /* Enhanced text shadow for better readability */
@@ -66,14 +68,84 @@
 
         /* Footer styling */
         .footer {
-            background-color: #181326;
-            margin-top: 0;
-            border-top: 2px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, #1a1030 0%, #2d1b4e 100%);
+            color: white;
+            padding: 4rem 0 2rem 0;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            color: #e0d4f7;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .footer h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            color: #e0d4f7;
+            letter-spacing: 1.5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .footer .lead {
+            font-size: 1.1rem;
+            color: #d1c9e3;
+            line-height: 1.8;
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            max-width: 600px;
+        }
+
+        .footer .btn-social {
+            border-color: #8b5cf6;
+            color: #8b5cf6;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            border-width: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        }
+
+        .footer .btn-social:hover {
+            background-color: #8b5cf6;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+        }
+
+        .footer .location-text {
+            color: #d1c9e3;
+            font-size: 1.1rem;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+        }
+
+        .footer .location-icon {
+            color: #8b5cf6;
+            font-size: 1.2rem;
         }
 
         .copyright {
-            background-color: #0f0b1a;
+            background: linear-gradient(135deg, #0f0820 0%, #1a0f3d 100%);
+            border-top: 1px solid rgba(139, 92, 246, 0.3);
         }
+
+        .copyright p {
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            color: #d1c9e3;
+            font-weight: 400;
+        }
+
+        .copyright strong {
+            color: #8b5cf6;
+        }
+
+
 
         /* Responsive adjustments for mobile */
         @media (max-width: 991.98px) {
@@ -86,6 +158,32 @@
                 padding: 1.5rem;
                 margin: 0.5rem;
             }
+
+            .footer {
+                padding: 3rem 0 2rem 0;
+            }
+
+            .footer .col-lg-8 {
+                margin-bottom: 3rem !important;
+            }
+
+            .footer h3 {
+                font-size: 1.5rem !important;
+            }
+
+            .footer h4 {
+                font-size: 1.2rem !important;
+            }
+
+            .footer .lead {
+                font-size: 1rem !important;
+            }
+
+            .footer .btn-social {
+                width: 50px !important;
+                height: 50px !important;
+                font-size: 1.2rem !important;
+            }
         }
     </style>
 </head>
@@ -96,13 +194,14 @@
     <header id="masthead" class="masthead bg-primary text-white text-center"
         style="background-image: url('assets/dalle.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-position: center; min-height: 100vh; display: flex; align-items: center; padding-top: 0; position: relative;">
         <div
-            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(24, 19, 38, 0.7); z-index: 1;">
+            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(26, 16, 48, 0.7); z-index: 1;">
         </div>
         <div class="container d-flex align-items-center flex-column"
             style="min-height: 100vh; justify-content: center; position: relative; z-index: 2;">
             <div class="glass-content">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/alumni_celllogo-removebg-preview.png" alt="..." />
+                <img class="masthead-avatar mb-5" src="assets/img/alumni_celllogo-removebg-preview.png"
+                    alt="SACC Logo" />
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">YEARBOOK <span class="year-display"></span></h1>
                 <!-- Icon Divider-->
@@ -159,73 +258,68 @@
         </div>
     </header>
     <!-- Footer-->
-    <footer class="footer text-center" id="footer" style="background-color: #181326; color: white;">
+    <footer class="footer text-center" id="footer">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center justify-content-center">
                 <!-- Footer Logo and About -->
-                <div class="col-lg-8 mb-4 mb-lg-0">
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start">
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <div
+                        class="d-flex align-items-center justify-content-center justify-content-lg-start flex-column flex-lg-row">
                         <img src="assets/img/alumni_celllogo-removebg-preview.png" alt="SACC Logo"
-                            style="height: 60px; margin-right: 20px;">
-                        <div class="text-lg-start">
-                            <h5 class="text-uppercase mb-2">Student Alumni Connect Cell</h5>
-                            <p class="mb-0" style="font-size: 0.9rem; color: #cccccc;">Fostering connections between
-                                students, alumni, and the Institute. SACC provides mentorship, organizes events, and
-                                offers resources to help students and alumni engage with their alma mater and fellow
-                                alumni.</p>
+                            style="height: 80px; margin-bottom: 2rem; margin-right: 0; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));"
+                            class="mb-lg-0 me-lg-4">
+                        <div class="text-center text-lg-start">
+                            <h3 class="text-uppercase mb-3 fw-bold">Student Alumni Connect Cell</h3>
+                            <p class="mb-0 lead">
+                                Fostering meaningful connections between students, alumni, and the Institute. SACC
+                                provides mentorship opportunities, organizes engaging events, and offers valuable
+                                resources to help students and alumni connect with their alma mater and fellow
+                                graduates.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Footer Social Icons -->
                 <div class="col-lg-4">
-                    <h5 class="text-uppercase mb-3">Connect With Us</h5>
-                    <div class="mb-3">
-                        <a class="btn btn-outline-light btn-social mx-1"
-                            href="https://www.facebook.com/iiith.alumnicell"
-                            style="border-color: #8b5cf6; color: #8b5cf6;"
-                            onmouseover="this.style.backgroundColor='#8b5cf6'; this.style.color='white';"
-                            onmouseout="this.style.backgroundColor='transparent'; this.style.color='#8b5cf6';"><i
-                                class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1"
-                            href="https://www.linkedin.com/company/alumni-cell-iiit-h/"
-                            style="border-color: #8b5cf6; color: #8b5cf6;"
-                            onmouseover="this.style.backgroundColor='#8b5cf6'; this.style.color='white';"
-                            onmouseout="this.style.backgroundColor='transparent'; this.style.color='#8b5cf6';"><i
-                                class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1"
-                            href="https://www.instagram.com/alumnicell_iiith/"
-                            style="border-color: #8b5cf6; color: #8b5cf6;"
-                            onmouseover="this.style.backgroundColor='#8b5cf6'; this.style.color='white';"
-                            onmouseout="this.style.backgroundColor='transparent'; this.style.color='#8b5cf6';"><i
-                                class='fab fa-instagram'></i></a>
+                    <h4 class="text-uppercase mb-4 fw-bold">Connect With Us</h4>
+                    <div class="mb-4">
+                        <a class="btn btn-outline-light btn-social mx-2 mb-3"
+                            href="https://www.facebook.com/iiith.alumnicell">
+                            <i class="fab fa-fw fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-social mx-2 mb-3"
+                            href="https://www.linkedin.com/company/alumni-cell-iiit-h/">
+                            <i class="fab fa-fw fa-linkedin-in"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-social mx-2 mb-3"
+                            href="https://www.instagram.com/alumnicell_iiith/">
+                            <i class='fab fa-instagram'></i>
+                        </a>
                     </div>
-                    <p class="small mb-0" style="color: #cccccc;">
-                        <i class="fas fa-map-marker-alt me-2"></i>
-                        IIIT Hyderabad, Gachibowli, 500032
-                    </p>
+                    <div class="mb-3">
+                        <p class="mb-2 location-text">
+                            <i class="fas fa-map-marker-alt me-3 location-icon"></i>
+                            IIIT Hyderabad
+                        </p>
+                        <p class="mb-0" style="color: #d1c9e3; font-size: 1rem; font-family: 'Lato', sans-serif;">
+                            Gachibowli, Hyderabad - 500032
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
     <!-- Copyright Section-->
-    <div class="copyright py-4 text-center text-white" style="background-color: #0f0b1a;">
-        <div class="container"><small>Copyright &copy; Student Alumni Connect Cell, <span
-                    class="year-display"></span></small></div>
-    </div>
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
-    <div class="scroll-to-top d-lg-none position-fixed">
-        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#masthead"><i
-                class="fas fa-chevron-up"></i></a>
+    <div class="copyright py-4 text-center text-white">
+        <div class="container">
+            <p class="mb-0">
+                Copyright &copy; <strong>Student Alumni Connect Cell</strong>, <span class="year-display"></span>
+            </p>
+        </div>
     </div>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- * *                               SB Forms JS                               * *-->
-    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     <script>
         // Dynamically set the current year
         const currentYear = new Date().getFullYear();

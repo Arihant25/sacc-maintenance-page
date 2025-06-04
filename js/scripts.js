@@ -3,12 +3,8 @@
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
 */
-//
-// Scripts
-// 
 
 window.addEventListener('DOMContentLoaded', event => {
-
     // Dynamic content based on current month
     function showDynamicContent() {
         const currentDate = new Date();
@@ -50,28 +46,4 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Initialize dynamic content
     showDynamicContent();
-
-    // Debug function to test different months (can be removed in production)
-    window.testMonth = function (month) {
-        const sections = document.querySelectorAll('.dynamic-section');
-        sections.forEach(section => {
-            section.style.display = 'none';
-        });
-
-        if (month >= 1 && month <= 3) {
-            document.getElementById('coming-soon-section').style.display = 'block';
-            console.log('Showing Coming Soon section for month:', month);
-        } else if (month >= 4 && month <= 8) {
-            document.getElementById('maintenance-section').style.display = 'block';
-            console.log('Showing Maintenance section for month:', month);
-        } else if (month >= 9 && month <= 12) {
-            document.getElementById('thank-you-section').style.display = 'block';
-            console.log('Showing Thank You section for month:', month);
-        }
-    };
-
-    // Log current month for debugging
-    const currentMonth = new Date().getMonth() + 1;
-    console.log('Current month:', currentMonth);
-
 });
