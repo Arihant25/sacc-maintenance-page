@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="author" content="SACC, IIITH" />
-    <title>Yearbook '25 - SACC, IIITH</title>
+    <title>Yearbook - SACC, IIITH</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -312,7 +312,7 @@
     <div class="copyright py-4 text-center text-white">
         <div class="container">
             <p class="mb-0">
-                Copyright &copy; <strong>Student Alumni Connect Cell</strong>, <span class="year-display"></span>
+                Copyright &copy; <strong>Student Alumni Connect Cell</strong>, <span id="copyright-year-span"></span>
             </p>
         </div>
     </div>
@@ -321,11 +321,16 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <script>
-        // Dynamically set the current year
+        // Dynamically set the graduating batch year (current year - 4)
         const currentYear = new Date().getFullYear();
+        const graduatingBatchYear = currentYear - 4;
         document.querySelectorAll('.year-display').forEach(element => {
-            element.textContent = currentYear;
+            element.textContent = graduatingBatchYear;
         });
+        // Set current year specifically for the copyright section
+        if (document.getElementById('copyright-year-span')) {
+            document.getElementById('copyright-year-span').textContent = currentYear;
+        }
     </script>
 </body>
 
