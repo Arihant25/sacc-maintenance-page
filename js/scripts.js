@@ -6,43 +6,64 @@
 
 window.addEventListener('DOMContentLoaded', event => {
     // Dynamic content based on current month
-    function showDynamicContent() {
+    function showDynamicContent(monthOverride = null) {
         const currentDate = new Date();
-        const currentMonth = currentDate.getMonth() + 1; // getMonth() returns 0-11, so add 1
+        const currentMonth = monthOverride || (currentDate.getMonth() + 1); // getMonth() returns 0-11, so add 1
 
         // Hide all sections first
         const sections = document.querySelectorAll('.dynamic-section');
         sections.forEach(section => {
             section.style.display = 'none';
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
         });
 
         // Show appropriate section based on month
+        let targetSection = null;
+        let sectionName = '';
+
         if (currentMonth >= 1 && currentMonth <= 3) {
             // January - March: Coming Soon
-            document.getElementById('coming-soon-section').style.display = 'block';
+            targetSection = document.getElementById('coming-soon-section');
+            sectionName = 'Coming Soon';
         } else if (currentMonth >= 4 && currentMonth <= 8) {
             // April - August: Server Down for Maintenance
-            document.getElementById('maintenance-section').style.display = 'block';
+            targetSection = document.getElementById('maintenance-section');
+            sectionName = 'Server Down for Maintenance';
         } else if (currentMonth >= 9 && currentMonth <= 12) {
             // September - December: Thank You
-            document.getElementById('thank-you-section').style.display = 'block';
+            targetSection = document.getElementById('thank-you-section');
+            sectionName = 'Thank You';
         }
 
-        // Add fade-in effect
-        setTimeout(() => {
-            const visibleSection = document.querySelector('.dynamic-section[style*="block"]');
-            if (visibleSection) {
-                visibleSection.style.opacity = '0';
-                visibleSection.style.transform = 'translateY(20px)';
-                visibleSection.style.transition = 'all 0.5s ease-in-out';
+        if (targetSection) {
+            targetSection.style.display = 'block';
 
-                setTimeout(() => {
-                    visibleSection.style.opacity = '1';
-                    visibleSection.style.transform = 'translateY(0)';
-                }, 100);
+            // Add fade-in effect
+            setTimeout(() => {
+                targetSection.style.transition = 'all 0.5s ease-in-out';
+                targetSection.style.opacity = '1';
+                targetSection.style.transform = 'translateY(0)';
+            }, 100);
+
+            if (monthOverride) {
+                console.log(`Showing "${sectionName}" section for month ${currentMonth}`);
             }
-        }, 100);
+        }
     }
+
+    // Function to test different months - can be called from browser console
+    function testMonth(monthNumber) {
+        if (monthNumber < 1 || monthNumber > 12) {
+            console.error('Month number must be between 1 and 12');
+            return;
+        }
+
+        showDynamicContent(monthNumber);
+    }
+
+    // Make testMonth function globally available
+    window.testMonth = testMonth;
 
     // Initialize dynamic content
     showDynamicContent();

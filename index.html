@@ -25,7 +25,7 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            background: linear-gradient(135deg, #0f0323 0%, #1a0533 25%, #2d1b47 50%, #1a0533 75%, #0f0323 100%);
+            background-color: #1c0d2e;
             min-height: 100vh;
         }
 
@@ -37,7 +37,23 @@
             padding-top: 0 !important;
             padding-bottom: 0 !important;
             position: relative;
-            background: linear-gradient(135deg, #0f0323 0%, #1a0533 25%, #2d1b47 50%, #1a0533 75%, #0f0323 100%);
+            background: linear-gradient(to bottom right, rgba(102, 153, 238, 0.6) 36%, rgba(18, 4, 44, 0.6) 64%), url('assets/dalle.png');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .masthead::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(28, 13, 46, 0.7),
+                    rgba(28, 13, 46, 0.8));
+            z-index: 1;
         }
 
         .masthead::before {
@@ -71,10 +87,7 @@
         /* Enhanced glassy styles with purple theme - Modern and Less Transparent */
         .glass-content {
             background: linear-gradient(135deg,
-                    rgba(75, 0, 130, 0.85) 0%,
-                    rgba(138, 43, 226, 0.8) 25%,
-                    rgba(148, 0, 211, 0.85) 50%,
-                    rgba(138, 43, 226, 0.8) 75%,
+                    rgba(36, 1, 60, 0.85) 0%,
                     rgba(75, 0, 130, 0.85) 100%);
             backdrop-filter: blur(25px);
             -webkit-backdrop-filter: blur(25px);
@@ -122,8 +135,8 @@
 
         .glass-section {
             background: linear-gradient(135deg,
-                    rgba(138, 43, 226, 0.6) 0%,
-                    rgba(148, 0, 211, 0.55) 50%,
+                    rgba(64, 6, 118, 0.6) 0%,
+                    rgba(23, 2, 32, 0.55) 50%,
                     rgba(75, 0, 130, 0.6) 100%);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
@@ -237,12 +250,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .btn-outline-light:hover::before {
-            left: 100%;
         }
 
         .btn-outline-light:hover {
@@ -253,41 +261,28 @@
             transform: translateY(-3px) scale(1.02);
         }
 
-        /* Enhanced Footer styling with purple gradients */
+        /* Enhanced Footer styling with exact design match */
         .footer {
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
-            background: linear-gradient(135deg,
-                    #0f0323 0%,
-                    #1a0533 25%,
-                    #2d1b47 50%,
-                    #1a0533 75%,
-                    #0f0323 100%);
+            background: linear-gradient(to bottom right, #6699ee 36%, rgba(116, 56, 228, 1) 64%);
             position: relative;
-            padding: 3rem 2rem;
+            padding: 2rem;
             flex-direction: row;
             z-index: 1;
-            border-top: 2px solid rgba(138, 43, 226, 0.3);
-            box-shadow: 0 -10px 30px rgba(75, 0, 130, 0.3);
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background:
-                radial-gradient(circle at 30% 30%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 70%, rgba(75, 0, 130, 0.1) 0%, transparent 50%);
-            z-index: -1;
         }
 
         .footer::after {
-            display: none;
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #1c0d2e;
+            z-index: -1;
         }
 
         .footer-container {
@@ -302,30 +297,17 @@
 
         .footer-logo-section {
             width: 50%;
-            max-width: 280px;
-            min-width: 150px;
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 2rem;
-            border: 1px solid rgba(148, 0, 211, 0.2);
+            max-width: 240px;
+            min-width: 128px;
+            background-color: transparent;
             z-index: 2;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 15px 30px rgba(75, 0, 130, 0.2);
         }
 
         .footer-logo-section img {
-            filter: drop-shadow(0 4px 8px rgba(138, 43, 226, 0.4)) brightness(1.1) contrast(1.1);
-            height: 180px;
-            width: auto;
-            transition: all 0.3s ease;
-        }
-
-        .footer-logo-section:hover img {
-            filter: drop-shadow(0 6px 12px rgba(138, 43, 226, 0.6)) brightness(1.2) contrast(1.2);
-            transform: scale(1.05);
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
         }
 
         .footer-about-section {
@@ -337,37 +319,32 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.08), rgba(75, 0, 130, 0.08));
-            backdrop-filter: blur(8px);
-            border-radius: 15px;
-            padding: 2rem;
-            border: 1px solid rgba(148, 0, 211, 0.15);
         }
 
         .footer-about-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #9bb5ff 0%, #e0c3fc 50%, #c4b5fd 100%);
+            font-family: 'Playfair Display', 'Georgia', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #6699ee, rgba(116, 56, 228, 1));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            filter: drop-shadow(0 2px 4px rgba(138, 43, 226, 0.3));
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             letter-spacing: 1px;
         }
 
         .footer-about-text {
-            font-family: 'Lato', sans-serif;
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            color: #f2f2f2;
+            font-weight: 400;
+            line-height: 1.6;
             font-size: 1.1rem;
-            color: rgba(224, 195, 252, 0.9);
-            line-height: 1.8;
-            margin: 0;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.5px;
         }
 
         .footer-social-links {
-            gap: 2.5rem;
+            gap: 2rem;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -377,36 +354,22 @@
         }
 
         .footer-social-icon {
-            width: 2.5rem;
-            height: 2.5rem;
-            fill: #9bb5ff;
-            transition: all 0.4s ease;
-            filter: drop-shadow(0 2px 4px rgba(155, 181, 255, 0.3));
+            width: 2rem;
+            height: 2rem;
+            fill: rgba(116, 56, 228, 1);
+            transition: all 0.3s ease;
         }
 
         .footer-social-links a {
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.4s ease;
-            padding: 0.8rem;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(155, 181, 255, 0.1), rgba(224, 195, 252, 0.1));
-            border: 1px solid rgba(155, 181, 255, 0.2);
-            backdrop-filter: blur(5px);
-        }
-
-        .footer-social-links a:hover {
-            background: linear-gradient(135deg, rgba(155, 181, 255, 0.3), rgba(224, 195, 252, 0.3));
-            border-color: rgba(155, 181, 255, 0.6);
-            box-shadow: 0 8px 25px rgba(155, 181, 255, 0.4);
-            transform: translateY(-3px) rotate(5deg);
+            transition: all 0.3s ease;
         }
 
         .footer-social-links a:hover .footer-social-icon {
-            fill: #e0c3fc;
-            transform: scale(1.2);
-            filter: drop-shadow(0 4px 8px rgba(224, 195, 252, 0.5));
+            fill: #6699ee;
+            transform: scale(1.1);
         }
 
         /* Animations for enhanced visual appeal */
@@ -533,39 +496,26 @@
             .footer {
                 flex-direction: column;
                 align-items: center;
-                padding: 2rem 1rem;
             }
 
             .footer-container {
                 flex-direction: column;
                 align-items: center;
-                gap: 2rem;
             }
 
             .footer-about-section {
-                width: 90%;
-            }
-
-            .footer-logo-section {
-                width: 70%;
-                max-width: 200px;
-                padding: 1.5rem;
+                width: 87%;
             }
 
             .footer-about-title {
-                margin-top: 0;
-                margin-bottom: 1rem;
-                font-size: 2.2rem;
+                margin-top: 2rem;
+                margin-bottom: 0;
             }
 
             .footer-about-text {
                 width: 100%;
                 margin-top: 1rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .footer-social-links {
-                gap: 2rem;
+                margin-bottom: 2rem;
             }
         }
 
@@ -604,10 +554,6 @@
             .footer-social-icon {
                 width: 2rem;
                 height: 2rem;
-            }
-
-            .footer-social-links a {
-                padding: 0.6rem;
             }
         }
 
@@ -668,16 +614,67 @@
                 if (thankYouSection) thankYouSection.style.display = 'block';
             }
         });
+
+        // Function to test different months - can be called from browser console
+        function testMonth(monthNumber) {
+            if (monthNumber < 1 || monthNumber > 12) {
+                console.error('Month number must be between 1 and 12');
+                return;
+            }
+
+            const comingSoonSection = document.getElementById('coming-soon-section');
+            const maintenanceSection = document.getElementById('maintenance-section');
+            const thankYouSection = document.getElementById('thank-you-section');
+
+            // Hide all sections first
+            [comingSoonSection, maintenanceSection, thankYouSection].forEach(section => {
+                if (section) {
+                    section.style.display = 'none';
+                    section.style.opacity = '0';
+                    section.style.transform = 'translateY(20px)';
+                }
+            });
+
+            // Show appropriate section based on test month
+            let sectionToShow = null;
+            let sectionName = '';
+
+            if (monthNumber >= 1 && monthNumber <= 3) {
+                // Jan-Mar: Coming Soon
+                sectionToShow = comingSoonSection;
+                sectionName = 'Coming Soon';
+            } else if (monthNumber >= 4 && monthNumber <= 8) {
+                // Apr-Aug: Maintenance
+                sectionToShow = maintenanceSection;
+                sectionName = 'Server Down for Maintenance';
+            } else {
+                // Sep-Dec: Thank You
+                sectionToShow = thankYouSection;
+                sectionName = 'Thank You';
+            }
+
+            if (sectionToShow) {
+                sectionToShow.style.display = 'block';
+
+                // Add smooth transition effect
+                setTimeout(() => {
+                    sectionToShow.style.transition = 'all 0.5s ease-in-out';
+                    sectionToShow.style.opacity = '1';
+                    sectionToShow.style.transform = 'translateY(0)';
+                }, 100);
+
+                console.log(`Showing "${sectionName}" section for month ${monthNumber}`);
+            }
+        }
+
+        // Make testMonth function globally available
+        window.testMonth = testMonth;
     </script>
 
     <!-- Masthead-->
-    <header id="masthead" class="masthead bg-primary text-white text-center"
-        style="background-image: linear-gradient(135deg, rgba(15, 3, 35, 0.85) 0%, rgba(26, 5, 51, 0.8) 25%, rgba(45, 27, 71, 0.75) 50%, rgba(26, 5, 51, 0.8) 75%, rgba(15, 3, 35, 0.85) 100%), url('assets/dalle.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-position: center; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding-top: 0; position: relative;">
-        <div
-            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.1) 0%, rgba(75, 0, 130, 0.15) 30%, rgba(15, 3, 35, 0.3) 70%, rgba(15, 3, 35, 0.6) 100%); z-index: 2;">
-        </div>
+    <header id="masthead" class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column"
-            style="min-height: 100vh; justify-content: center; position: relative; z-index: 2;">
+            style="min-height: 100vh; justify-content: center; position: relative; z-index: 3;">
             <div class="glass-content">
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">YEARBOOK <span class="year-display"></span></h1>
@@ -724,8 +721,7 @@
                         <p class="mt-3 text-white-75">Thank you for being part of our amazing yearbook journey!</p>
                         <p class="text-white-75 mb-4">Explore previous yearbooks and stay connected with our community.
                         </p>
-                        <a href="https://sacc.iiit.ac.in" target="_blank"
-                            class="btn btn-xl btn-outline-light fade-in-animation">
+                        <a href="https://sacc.iiit.ac.in" target="_blank" class="btn btn-outline-light btn-xl">
                             <i class="fas fa-external-link-alt me-2"></i>
                             Visit SACC Website
                         </a>
